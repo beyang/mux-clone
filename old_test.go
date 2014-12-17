@@ -286,22 +286,22 @@ type methodMatcherTest struct {
 
 var methodMatcherTests = []methodMatcherTest{
 	{
-		matcher: methodMatcher{[]string{"GET", "POST", "PUT"}, false},
+		matcher: methodMatcher([]string{"GET", "POST", "PUT"}),
 		method:  "GET",
 		result:  true,
 	},
 	{
-		matcher: methodMatcher{[]string{"GET", "POST", "PUT"}, false},
+		matcher: methodMatcher([]string{"GET", "POST", "PUT"}),
 		method:  "POST",
 		result:  true,
 	},
 	{
-		matcher: methodMatcher{[]string{"GET", "POST", "PUT"}, false},
+		matcher: methodMatcher([]string{"GET", "POST", "PUT"}),
 		method:  "PUT",
 		result:  true,
 	},
 	{
-		matcher: methodMatcher{[]string{"GET", "POST", "PUT"}, false},
+		matcher: methodMatcher([]string{"GET", "POST", "PUT"}),
 		method:  "DELETE",
 		result:  false,
 	},
